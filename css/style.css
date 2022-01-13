@@ -1,0 +1,88 @@
+body {
+  background-color: steelblue;
+}
+
+.card {
+  width: 450px;
+  font-size: 14px;
+  border: 1px solid green;
+  background-color: white;
+  border-radius: 3px;
+  padding: 0.5rem;
+  background-image: url("./images/average acccess time.JPG");
+  background-repeat: no-repeat;
+}
+.card-header {
+  font-size: 1.4rem;
+  scale: 1.2;
+}
+
+.someOther1,
+.someOther2, .someClass {
+  background: green;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.someClass {
+  line-height: 1.4;
+}
+
+body {
+  color: darkslategray;
+  background: azure;
+}
+
+.card-v1 {
+  background-color: teal;
+  color: white;
+}
+
+.card-v2 {
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3), 4px 3px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3), 4px 3px 2px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3), 4px 3px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3), 4px 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.some-f {
+  font-family: "Ubuntu", "Arial", "Helvetica", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* mixin + content */
+@-webkit-keyframes ani1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes ani1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes ani1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes ani1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

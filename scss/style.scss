@@ -1,0 +1,122 @@
+@use "sass:map";
+
+@import "./partials/variables";
+
+body {
+    background-color: steelblue;
+}
+
+.card {
+    width: $card_width;
+    font-size: $card_font_size;
+    border: $myList;
+    background-color: white;
+    border-radius: 3px;
+    padding: 0.5rem;
+    background-image: url($str_2);
+    background-repeat: $str_3;
+
+    &-header {
+        font-size: $card_hdr_font_size;
+        scale: $scale_sm;
+    }
+}
+
+// maps
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700,
+);
+
+@debug map.get($font-weights, "medium");
+
+// inheritance using placeholders
+%shared {
+    background: green;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.someClass {
+    @extend %shared;
+    line-height: 1.4;
+}
+
+.someOther1,
+.someOther2 {
+    @extend %shared;
+}
+
+// mixins - simple example
+@mixin mx1 {
+    color: darkslategray;
+    background: azure;
+}
+
+body {
+    @include mx1();
+}
+
+// mixin - with single param example
+@mixin mx2($bgColor) {
+    background-color: $bgColor;
+}
+$c1_bgColor: teal;
+
+.card-v1 {
+    @include mx2($c1_bgColor);
+    color: white;
+}
+
+// mixin - with multiple param example
+@mixin bxShadow($s...) {
+    -webkit-box-shadow: $s;
+    -moz-box-shadow: $s;
+    -o-box-shadow: $s;
+    box-shadow: $s;
+}
+
+
+.card-v2 {
+    @include bxShadow($bx1, $bx2);
+}
+
+// mixin with default value
+@mixin set-font($family: "Ubuntu", $weight: 400, $style: normal) {
+    font-family: $family, "Arial", "Helvetica", sans-serif;
+    font-style: $style;
+    font-weight: $weight;
+}
+
+.some-f {
+    @include set-font;
+}
+
+/* mixin + content */
+@mixin animation($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+
+    @-o-keyframes #{$name} {
+        @content;
+    }
+
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@include animation(ani1) {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

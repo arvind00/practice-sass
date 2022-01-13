@@ -1,0 +1,14 @@
+{
+  "name": "practice-sass",
+  "version": "1.0.0",
+  "description": "a project to learn scss",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx sass --watch scss:css"
+  },
+  "author": "arvindchand <to.arvmail@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.45.1"
+  }
+}

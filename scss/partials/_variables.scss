@@ -1,0 +1,18 @@
+// variable names should start with $
+// use only alphanumeric and underscore in the name
+// you can also assign values without the units I mean just the number
+
+// numerical variables
+$card_width: 450px;
+$card_hdr_font_size: 1.4rem;
+$card_font_size: 14px;
+$scale_sm: 1.2;
+
+// string variables
+$str_1: "./images/access time and hit ratio.JPG";
+$str_2: "./images/average acccess time.JPG";
+$str_3: no-repeat;
+// list variables
+$myList: 1px solid green;
+$bx1: 1px 2px 3px rgba(0, 0, 0, 0.3);
+$bx2: 4px 3px 2px rgba(0, 0, 0, 0.3);
